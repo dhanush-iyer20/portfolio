@@ -130,6 +130,24 @@ const Experience = () => {
                 <p key={idx}>{line}</p>
               ))}
             </div>
+
+            {/* Restored Images Grid */}
+            {experience.links && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                {experience.links.map((link, idx) => (
+                  <div key={idx} className="group relative overflow-hidden rounded-xl border border-gray-800 bg-[#111]">
+                    <img
+                      src={link.imgSrc}
+                      alt={link.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="p-4">
+                      <h4 className="text-white font-bold text-sm uppercase tracking-wider">{link.title}</h4>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
