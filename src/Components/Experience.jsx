@@ -9,6 +9,8 @@ import Humind3 from '../assets/Photos/Humind3.png';
 import CLXNS1 from '../assets/Photos/CLXNS 1.png';
 
 const Experience = () => {
+  const [selectedImage, setSelectedImage] = React.useState(null);
+
   // Array of objects containing information for each card
   const experiences = [
     {
@@ -137,7 +139,11 @@ const Experience = () => {
             {experience.links && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 pt-8 border-t border-gray-800/50">
                 {experience.links.map((link, idx) => (
-                  <div key={idx} className="group/img relative overflow-hidden rounded-xl bg-[#080808] border border-gray-800 transition-all hover:border-[#836FFF]/30">
+                  <div
+                    key={idx}
+                    onClick={() => setSelectedImage(link)}
+                    className="group/img relative overflow-hidden rounded-xl bg-[#080808] border border-gray-800 transition-all hover:border-[#836FFF]/30 cursor-pointer"
+                  >
                     <img
                       src={link.imgSrc}
                       alt={link.title}
@@ -154,6 +160,38 @@ const Experience = () => {
           </div>
         ))}
       </div>
+
+      {/* Modern Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm transition-all animate-fadeIn"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors z-[110]"
+            onClick={() => setSelectedImage(null)}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          <div
+            className="relative max-w-5xl w-full max-h-[90vh] flex flex-col items-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedImage.imgSrc}
+              alt={selectedImage.title}
+              className="w-full h-full object-contain rounded-xl shadow-[0_0_50px_rgba(131,111,255,0.2)]"
+            />
+            <div className="mt-6 text-center">
+              <h4 className="text-[#836FFF] font-black text-xs uppercase tracking-[0.3em] mb-2">Work Overview</h4>
+              <p className="text-white text-xl font-bold">{selectedImage.title}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
