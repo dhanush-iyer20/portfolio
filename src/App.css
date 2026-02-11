@@ -1,0 +1,113 @@
+body {
+    background-image: linear-gradient(90deg, #070709 6.5%, #1d1938e9 93.2%);
+}
+
+.background-button {
+    background-image: linear-gradient(135deg, #836FFF -10%, #836FFF 100%);
+}
+
+.bg-gradient {
+    background-image: linear-gradient(90deg, #0707097f 6.5%, #1d19386a 93.2%);
+    backdrop-filter: blur(8px);
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.title {
+    color: #fff;
+    font-weight: bold;
+    line-height: 60px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #000;
+    text-align: center;
+}
+
+.image-intro {
+    /* Your existing styles for .image-intro */
+    transition: transform 0.8s ease;
+    /* Add transition for smooth animation */
+}
+
+.image-intro:hover {
+    transform: translateY(-20px);
+    /* Move the element 10 pixels upwards and scale it by 10% on hover */
+}
