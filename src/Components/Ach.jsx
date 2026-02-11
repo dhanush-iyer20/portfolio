@@ -58,33 +58,30 @@ const Ach = () => {
       <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-[5rem]">
         Achievements
       </h2>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mb-[5rem]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-[5rem] px-4">
         {achievements.map((achievement) => (
-          <a
+          <div
             key={achievement.id}
-            href={achievement.link}
-            className="block rounded-lg p-4 shadow-sm shadow-indigo-100"
+            className="group relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-gray-800 p-8 transition-all hover:border-[#836FFF] hover:-translate-y-2"
           >
-            {/* <img
-              alt={`Achievement ${achievement.id}`}
-              src={achievement.image}
-              className="h-56 w-full rounded-md object-cover"
-            /> */}
-            <div className="mt-2">
-              <dl>
-                <div>
-                  <dt className="sr-only">Title</dt>
-                  <dd className="font-medium text-white ">{achievement.title}</dd>
-                </div>
-                <div>
-                  <dt className="sr-only">Description</dt>
-                  <dd className="text-sm text-white text-bold">
-                    {achievement.description}
-                  </dd>
-                </div>
-              </dl>
+            <div className="absolute -right-4 -top-4 text-6xl opacity-10 group-hover:opacity-20 transition-opacity">
+              🏆
             </div>
-          </a>
+
+            <div className="relative z-10">
+              <h3 className="text-[#836FFF] font-black text-xl mb-2 tracking-tight">
+                {achievement.title}
+              </h3>
+              <p className="text-white text-md font-medium leading-snug">
+                {achievement.description}
+              </p>
+            </div>
+
+            <div className="mt-6 flex items-center gap-2 text-xs font-bold text-gray-500 group-hover:text-white transition-colors">
+              <span>VIEW DETAILS</span>
+              <span className="text-lg">→</span>
+            </div>
+          </div>
         ))}
       </div>
     </>

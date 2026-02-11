@@ -12,17 +12,6 @@ const Experience = () => {
   // Array of objects containing information for each card
   const experiences = [
     {
-      company: "Citi Bank",
-      position: "Information Analyst",
-      duration: "Jun 2025 – Present",
-      description: [
-        "Delivered actionable credit, equity, and macroeconomic insights to global Investment Banking & Markets teams supporting live deal execution and client decisions.",
-        "Acted as a research partner to IB bankers, synthesizing company financials, M&A activity, capital markets data, and broker research under tight timelines.",
-        "Built VBA-based workflow automations to improve research turnaround time, accuracy, and scalability, directly supporting decision velocity.",
-        "Regularly translated ambiguous business questions into structured analysis."
-      ],
-    },
-    {
       company: "Gulf Agency Company",
       position: "Innovation Intern",
       duration: "Apr 2024 – Sep 2024",
@@ -74,6 +63,16 @@ const Experience = () => {
           title: "Research Thesis"
         }
       ]
+    },
+    {
+      company: "Citi Bank",
+      position: "Information Analyst",
+      duration: "Jun 2025 – Present",
+      description: [
+        "Synthesizing financial data and macroeconomic insights for global Investment Banking & Markets teams.",
+        "Developing VBA-based workflow automations to accelerate research turnaround and decision velocity.",
+        "Translating complex business questions into structured, data-driven analysis."
+      ],
     },
     {
       company: "OLE-Solutions",

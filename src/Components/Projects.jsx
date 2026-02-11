@@ -33,82 +33,30 @@ const Projects = () => {
       <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-[5rem]">
         Projects
       </h2>
-      <div className="grid grid-cols-1 gap-8 mb-[5rem]">
-        {projects.map((project, index) => {
-          if (index % 2 === 0) {
-            // Design 1
-            return (
-              <section key={index}>
-                <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
-                    {/* Text Section */}
-                    <div className="md:col-span-1">
-                      <div className="max-w-lg md:max-w-none">
-                        <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-                          {project.name}
-                        </h2>
-                        <p className="mt-4 text-gray-300">{project.features}</p>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-block text-indigo-400 hover:underline"
-                        >
-                          View More
-                        </a>
-                      </div>
-                    </div>
-
-                    {/* Image Section */}
-                    <div className="md:col-span-3">
-                      <img
-                        src={project.img}
-                        className="rounded"
-                        alt={project.name}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </section>
-            );
-          } else {
-            // Design 2
-            return (
-              <section key={index}>
-                <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
-                    {/* Image Section */}
-                    <div className="md:col-span-3">
-                      <img
-                        src={project.img}
-                        className="rounded"
-                        alt={project.name}
-                      />
-                    </div>
-
-                    {/* Text Section */}
-                    <div className="md:col-span-1">
-                      <div className="max-w-lg md:max-w-none">
-                        <h2 className="text-2xl font-semibold text-white sm:text-3xl">
-                          {project.name}
-                        </h2>
-                        <p className="mt-4 text-gray-300">{project.features}</p>
-                        <a
-                          href={project.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="mt-2 inline-block text-indigo-400 hover:underline"
-                        >
-                          View More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            );
-          }
-        })}
+      <div id="projects" className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[5rem] px-4">
+        {projects.map((project, index) => (
+          <div key={index} className="group relative bg-[#111] border border-gray-800 p-8 rounded-2xl transition-all hover:border-[#836FFF] hover:shadow-[0_0_30px_-10px_rgba(131,111,255,0.3)]">
+            <div className="flex justify-between items-start mb-4">
+              <h3 className="text-2xl font-bold text-white group-hover:text-[#836FFF] transition-colors">
+                {project.name}
+              </h3>
+              <span className="text-2xl">🚀</span>
+            </div>
+            <p className="text-gray-400 leading-relaxed mb-6">
+              {project.features}
+            </p>
+            <div className="mt-auto flex items-center justify-between">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#836FFF] font-semibold text-sm hover:underline flex items-center gap-2"
+              >
+                Explore Repo <span className="text-lg">→</span>
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

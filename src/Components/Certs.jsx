@@ -43,269 +43,44 @@ const Certs = () => {
       <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-4">
         Certifications
       </h2>
-      <div className="flex flex-wrap justify-center ">
-        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              dateTime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>NISM</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span></span>
-            </time>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-screen-xl mx-auto">
+        {/* NISM */}
+        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="bg-[#836FFF]/10 text-[#836FFF] p-2 rounded-lg font-bold text-xs">NISM</span>
+            <h3 className="text-white font-bold">Research Analyst</h3>
           </div>
+          <p className="text-gray-400 text-sm">Equity market research, financial modelling, and valuation analysis.</p>
+        </div>
 
-          <div className="hidden sm:block sm:basis-56">
-            <iframe
-              alt="Guitar"
-              src={NISM}
-              className=" h-full w-full object-cover"
-            ></iframe>
+        {/* Google */}
+        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="bg-blue-500/10 text-blue-500 p-2 rounded-lg font-bold text-xs">GOOGLE</span>
+            <h3 className="text-white font-bold">Data Analytics</h3>
           </div>
+          <p className="text-gray-400 text-sm">Advanced Excel, SQL, Tableau, R, and data-driven decision making.</p>
+        </div>
 
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <h3 className="font-bold uppercase text-gray-900">
-                NISM Research Analyst Certification
-              </h3>
+        {/* CFI */}
+        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="bg-yellow-500/10 text-yellow-500 p-2 rounded-lg font-bold text-xs">CFI</span>
+            <h3 className="text-white font-bold">Business Analytics</h3>
+          </div>
+          <p className="text-gray-400 text-sm">Mastering business intelligence tools and predictive modelling.</p>
+        </div>
 
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                Learned about the financial markets, research analysis and equity report making.
-              </p>
+        {/* Map through the rest of the certs array */}
+        {certs.map((item, index) => (
+          <div key={index} className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="bg-gray-700/50 text-gray-300 p-2 rounded-lg font-bold text-xs uppercase">{item.by}</span>
+              <h3 className="text-white font-bold">{item.name.split(' - ')[1] || item.name}</h3>
             </div>
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="https://drive.google.com/file/d/1wlZuV9wZiOKHHvULvqgSIC1y78CY0DCE/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                See Certificate
-              </a>
-            </div>
+            <p className="text-gray-400 text-sm">{item.desc}</p>
           </div>
-        </article>
-        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              dateTime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>Google</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span></span>
-            </time>
-          </div>
-
-          <div className="hidden sm:block sm:basis-56">
-            <iframe
-              alt="Guitar"
-              src={GD}
-              className=" h-full w-full object-cover"
-            ></iframe>
-          </div>
-
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <h3 className="font-bold uppercase text-gray-900">
-                Google Data Analytics
-              </h3>
-
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                Learned about the various tools - R, Tableau, Power BI, Advance
-                Excel - Over 200 hours - learned end to end about data analysis
-                and data inspection.
-              </p>
-            </div>
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="https://coursera.org/share/23c86dbe3eab15b0b765c2f17f0686d7"
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                See Certificate
-              </a>
-            </div>
-          </div>
-        </article>
-        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              dateTime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>Mithibai College</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span></span>
-            </time>
-          </div>
-
-          <div className="hidden sm:block sm:basis-56">
-            <iframe
-              alt="Guitar"
-              src={EX}
-              className=" h-full w-full object-cover"
-            ></iframe>
-          </div>
-
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <h3 className="font-bold uppercase text-gray-900">
-                Advanced Excel
-              </h3>
-
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                Basic to Advanced excel training. The functions I learned -
-                sumproduct, transpose, aggregate, xlookup, textjoin,
-                getpivotdata, etc. - over 30 hours
-              </p>
-            </div>
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="https://drive.google.com/file/d/13WC_o-6lePUdKq7jiI3cu5qG9YT_p8Js/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                See Certificate
-              </a>
-            </div>
-          </div>
-        </article>
-
-        {certs.map((item) => {
-          return (
-            <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-              <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-                <time
-                  dateTime="2022-10-10"
-                  className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-                >
-                  <span>{item.by}</span>
-                  <span className="w-px flex-1 bg-gray-900/10"></span>
-                  <span></span>
-                </time>
-              </div>
-
-              <div className="hidden sm:block sm:basis-56">
-                <iframe
-                  alt="Guitar"
-                  src={item.img}
-                  className=" h-full w-full object-cover"
-                ></iframe>
-              </div>
-
-              <div className="flex flex-1 flex-col justify-between">
-                <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-                  <h3 className="font-bold uppercase text-gray-900">
-                    {item.name}
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                    {item.desc}
-                  </p>
-                </div>
-                <div className="sm:flex sm:items-end sm:justify-end">
-                  <a
-                    href={item.certlink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-                  >
-                    See Certificate
-                  </a>
-                </div>
-              </div>
-            </article>
-          );
-        })}
-        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              dateTime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>Udemy</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span></span>
-            </time>
-          </div>
-
-          <div className="hidden sm:block sm:basis-56">
-            <iframe
-              alt="Guitar"
-              src={WD}
-              className=" h-full w-full object-cover"
-            ></iframe>
-          </div>
-
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <h3 className="font-bold uppercase text-gray-900">
-                Python Specialist
-              </h3>
-
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                Learned about the basic and advanced python modules and applications.
-              </p>
-            </div>
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="https://drive.google.com/file/d/1kFWFm9ZG7PGPaBBmApagB-M3aBxy1liL/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                See Certificate
-              </a>
-            </div>
-          </div>
-        </article>
-        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
-          <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
-            <time
-              dateTime="2022-10-10"
-              className="flex items-center justify-between gap-4 text-xs font-bold uppercase text-gray-900"
-            >
-              <span>Udemy</span>
-              <span className="w-px flex-1 bg-gray-900/10"></span>
-              <span></span>
-            </time>
-          </div>
-
-          <div className="hidden sm:block sm:basis-56">
-            <iframe
-              alt="Guitar"
-              src={PY}
-              className=" h-full w-full object-cover"
-            ></iframe>
-          </div>
-
-          <div className="flex flex-1 flex-col justify-between">
-            <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-              <h3 className="font-bold uppercase text-gray-900">
-                Full stack developer certification
-              </h3>
-
-              <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-700">
-                Learned about the front end web design, backend design, databases and web3.
-              </p>
-            </div>
-            <div className="sm:flex sm:items-end sm:justify-end">
-              <a
-                href="https://drive.google.com/file/d/1TOu50ZD_qK7mAFy1Nuj4VbM_4nEvXJ2H/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer"
-                className="block bg-yellow-300 px-5 py-3 text-center text-xs font-bold uppercase text-gray-900 transition hover:bg-yellow-400"
-              >
-                See Certificate
-              </a>
-            </div>
-          </div>
-        </article>
-
+        ))}
       </div>
     </div>
   );
