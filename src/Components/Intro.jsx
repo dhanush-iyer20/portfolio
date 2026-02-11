@@ -26,13 +26,19 @@ const Intro = () => {
 
           <div className="relative flex sm:items-left items-center p-0 bg-transparent">
             <div className="p-8 pb-0 sm:p-16 lg:p-24 sm:items-left items-center">
-              <h2 className="text-3xl text-white font-bold sm:text-4xl">
-                Master Music Production in 8 Weeks! 🎶🔥
+              <h2 className="text-3xl text-white font-bold sm:text-4xl text-left">
+                Hi, I'm Dhanush Iyer 🚀
               </h2>
 
+              <p className="mt-4 text-gray-400 text-lg">
+                Information Analyst at Citi Bank | Full-Stack Developer | Innovation Enthusiast
+              </p>
+              
               <p className="mt-4 text-gray-500">
-                Unlock your full potential with this intensive live course designed to take you from beginner to pro.
-                Learn mixing, mastering, beat-making, and industry secrets—all in a hands-on, interactive way.
+                I bridge the gap between complex financial analysis and cutting-edge technology. 
+                From building VBA-based automations for global investment banking teams to 
+                developing full-stack applications with Next.js and Supabase, I thrive on 
+                solving ambiguous business problems with structured, data-driven solutions.
               </p>
 
               <button

@@ -12,6 +12,7 @@ import Education from "./Components/Education";
 import Certs from "./Components/Certs";
 import Contact from "./Components/Contact";
 import Ach from "./Components/Ach";
+import CoCurricular from "./Components/CoCurricular";
 
 function App() {
   return (
@@ -19,8 +20,12 @@ function App() {
       <Navbar />
       <Intro />
       <Experience />
+      <Projects />
       <Skills />
-      {/* <Projects /> */}
+      <Education />
+      <Certs />
+      <Ach />
+      <CoCurricular />
       <Contact />
       <Footer />
     </div>

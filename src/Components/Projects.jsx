@@ -2,30 +2,28 @@ import React from "react";
 
 const projects = [
   {
-    name: "Academic Projects",
-    features:
-      "Worked on over 20 projects such as Netflix business study, German Economy, Dmart Business study, Indian Digital Currency, Paper tube industr.",
-    img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1784&q=80",
-    link: "https://taplink.cc/dhanushiyer",
+    name: "Full-Stack Collection: Job Tracker, Workout Tracker, LifeOS",
+    features: "Built and deployed 3 full-stack applications with Next.js frontend and Supabase + PostgreSQL backend. Implemented secure authentication, real-time sync, and complex database schemas.",
+    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2426&q=80",
+    link: "#",
   },
   {
-    name: "Python Projects",
-    features:
-      "Made advanced python apps about DCF valuation, currency exchange, budgeting, stock analyzer, Monte carlo simulator",
-    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-    link: "https://super-semolina-2ec5d2.netlify.app/",
+    name: "Home Lab: Old Laptop to Linux Server",
+    features: "Converted legacy hardware into a high-performance Linux server. Deployed Docker containers to host internal services, managed PostgreSQL instances, and enabled secure remote access.",
+    img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80",
+    link: "#",
   },
   {
-    name: "Data analysis Projects",
-    features: "Multi-user blogging platform with features like JWT Auth, search, likes, and comments.",
-    img: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80",
-    link: "https://github.com/dhanush-iyer20/blogMan",
+    name: "Python Automation Tools",
+    features: "Developed custom tools for DCF valuation, M&A due diligence, and financial analysis. Integrated with APIs to automate data ingestion for Investment Banking research.",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    link: "#",
   },
   {
-    name: "Research Projects",
-    features: "Made 4 research papers about Financial literacy, Humanresource management, SME IPOs with advanced statistics and hypothesis tools.",
-    img: "https://images.unsplash.com/photo-1487014679447-9f8336841d58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1905&q=80",
-    link: "https://oslavaevents.netlify.app/",
+    name: "Data Science & Research",
+    features: "Authored 4+ research papers on financial literacy and SME IPOs using advanced statistical tools. Built Power BI dashboards tracking operational KPIs for global logistics.",
+    img: "https://images.unsplash.com/photo-1551288049-bbbda536ad89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1770&q=80",
+    link: "#",
   },
 ];
 

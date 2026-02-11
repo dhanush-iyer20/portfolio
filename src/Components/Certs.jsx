@@ -8,6 +8,27 @@ import WD from '../assets/WD.pdf'
 import PY from '../assets/PY.pdf'
 const certs = [
   {
+    name: "Udemy - Advanced Agentic AI",
+    certlink: "#",
+    img: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Udemy_logo.svg",
+    by: "Udemy",
+    desc: "Comprehensive course on building autonomous AI agents and complex agentic workflows.",
+  },
+  {
+    name: "CFI - Financial Modelling & Valuation Analyst (FMVA)",
+    certlink: "#",
+    img: "https://corporatefinanceinstitute.com/wp-content/themes/cfi/assets/img/cfi-logo.png",
+    by: "CFI",
+    desc: "Advanced training in financial modeling, valuation, and investment analysis.",
+  },
+  {
+    name: "CFI - Business Analytics Certificate",
+    certlink: "#",
+    img: "https://corporatefinanceinstitute.com/wp-content/themes/cfi/assets/img/cfi-logo.png",
+    by: "CFI",
+    desc: "Mastering data-driven decision making and business intelligence tools.",
+  },
+  {
     name: "Accenture - Data Analysis Specialist",
     certlink:
       "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_J82cdHtinaEtqsvZi_1686398607335_completion_certificate.pdf",
@@ -23,7 +44,7 @@ const Certs = () => {
         Certifications
       </h2>
       <div className="flex flex-wrap justify-center ">
-      <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
+        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
           <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
             <time
               dateTime="2022-10-10"
@@ -200,7 +221,7 @@ const Certs = () => {
             </article>
           );
         })}
-      <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
+        <article className="max-w-[50rem] rounded-lg m-5 flex bg-white transition hover:shadow-xl">
           <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
             <time
               dateTime="2022-10-10"

@@ -8,7 +8,7 @@ const Education = () => {
         My Education
       </h2>
       <div className="flex flex-wrap justify-center ">
-        <article className="max-w-[20rem] rounded-lg m-5 border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6 max-w-[20rem]">
+        <article className="max-w-[40rem] rounded-lg m-5 border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
           <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -28,22 +28,21 @@ const Education = () => {
             </svg>
           </span>
 
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900">
-            Mithibai College - Bachelor Of Management Studies
+          <h3 className="mt-0.5 text-xl font-bold text-gray-900">
+            SVKM's Mithibai College of Arts, Science and Commerce
           </h3>
+          <p className="text-gray-700 font-medium">
+            Bachelor of Management Studies (Finance) | 2022 – 2025
+          </p>
 
-          <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-            {" "}
-            <b><strong>GPA 8.45</strong> </b>
+          <p className="mt-2 text-md text-blue-600 font-bold">
+            CGPA: 8.45 / 10
           </p>
           <p className="mt-2 line-clamp-4 text-sm/relaxed text-gray-500">
-            {" "}
-            Courses - Production Management, Cost and Financial Accounts, IT in
-            business management, Marketing, Financial Markets, PR, Strategic
-            Management
+            Specialized in Finance. Relevant coursework includes Production Management, Cost and Financial Accounts, IT in Business Management, Marketing, Financial Markets, PR, and Strategic Management.
           </p>
         </article>
-        <article className="rounded-lg max-w-[20rem] m-5  border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+        <article className="rounded-lg max-w-[20rem] m-5 border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
           <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,16 +62,16 @@ const Education = () => {
             </svg>
           </span>
 
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900">
-            Holy Angels Jr College - XIIth Standard - <b><strong>92%</strong> </b>
+          <h3 className="mt-0.5 text-lg font-bold text-gray-900">
+            Holy Angels Junior College
           </h3>
+          <p className="text-gray-700 font-medium">HSC (Commerce) | 92%</p>
 
           <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-            Learned about the field of commerce and economics also the basics of
-            statistical analysis
+            Focused on Economics, Accounts, and Statistical Analysis.
           </p>
         </article>
-        <article className="rounded-lg max-w-[20rem] m-5  border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
+        <article className="rounded-lg max-w-[20rem] m-5 border border-gray-100 bg-white p-4 shadow-sm transition hover:shadow-lg sm:p-6">
           <span className="inline-block rounded bg-blue-600 p-2 text-white">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -92,12 +91,13 @@ const Education = () => {
             </svg>
           </span>
 
-          <h3 className="mt-0.5 text-lg font-medium text-gray-900">
-            Holy Angels School - Xth Standard - <b><strong>94%</strong> </b>
+          <h3 className="mt-0.5 text-lg font-bold text-gray-900">
+            Holy Angels School
           </h3>
+          <p className="text-gray-700 font-medium">SSC | 94%</p>
 
           <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-            Interact Club Treasurer, Debate competition runner up
+            Interact Club Treasurer, Debate competition runner up.
           </p>
         </article>
       </div>

@@ -3,58 +3,51 @@ import React from "react";
 const achievements = [
   {
     id: 1,
-    title: "National Finalist",
-    description: "IMT Ghaziabad’s Burning Ambition case competition.",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "National Finalist (Top 10 among 500 teams)",
+    description: "IMT Ghaziabad’s Burning Ambition, flagship case competition.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 2,
-    title: "1st Place",
-    description: "Annual Talent Search Competition, Business Pitch.",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "1st Prize",
+    description: "Annual Talent Search Competition, Business Pitching.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 3,
-    title: "2nd Place",
-    description: "Jai Hind College’s Idea Generation & Business Pitching.",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "1st Prize",
+    description: "Brand Revival Challenge.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 4,
-    title: "Honarable Mention",
-    description: "Jai Hind College’s Idea Generation & Business Pitching.",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "1st Prize",
+    description: "Chemtrek Debate Competition.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 5,
-    title: "1st Prize",
-    description: "Debate",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "2nd Prize",
+    description: "Jai Hind College’s Annual Fest, Idea Generation & Business Pitching.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 6,
-    title: "1st Prize",
-    description: "Case Competition",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "2nd Prize",
+    description: "Reclamo Annual Case Competition.",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
   {
     id: 7,
-    title: "1st Prize",
-    description: "Brand Competition",
-    image:
-      "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+    title: "Honorable Mention",
+    description: "Model United Nations organized by IIT-Bombay (against 40+ people).",
+    image: "https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&auto=format&fit=crop&w=1770&q=80",
     link: "#",
   },
 ];

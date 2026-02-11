@@ -12,10 +12,24 @@ const Experience = () => {
   // Array of objects containing information for each card
   const experiences = [
     {
+      company: "Citi Bank",
+      position: "Information Analyst",
+      duration: "Jun 2025 – Present",
+      description: [
+        "Delivered actionable credit, equity, and macroeconomic insights to global Investment Banking & Markets teams supporting live deal execution and client decisions.",
+        "Acted as a research partner to IB bankers, synthesizing company financials, M&A activity, capital markets data, and broker research under tight timelines.",
+        "Built VBA-based workflow automations to improve research turnaround time, accuracy, and scalability, directly supporting decision velocity.",
+        "Regularly translated ambiguous business questions into structured analysis."
+      ],
+    },
+    {
       company: "Gulf Agency Company",
       position: "Innovation Intern",
+      duration: "Apr 2024 – Sep 2024",
       description: [
-        "Built over 12 dashboards for top management and customers. Conducted interviews with over 170 users to create user journey/user mapping. Used Microsoft Power Automate to roll out solutions across 28 branches in India.Created a research report on the future of the shipping industry."
+        "Designed 15+ Power BI dashboards to track operational and shipping KPIs, enabling data-driven decision making for leadership.",
+        "Built a Python-based automation tool to process Excel workflows, saving significant manual effort weekly.",
+        "Conducted user research with 100+ B2B users, translating feedback into UX and feature recommendations."
       ],
       links: [
         {
@@ -38,8 +52,11 @@ const Experience = () => {
     {
       company: "IgniteXL Ventures",
       position: "VC Deal Sourcing Intern",
+      duration: "Mar 2024 – Apr 2024",
       description: [
-        "Used AI tools like Perplexity, Gemini, chatGPT, and Market research and sourced and performed due diligence on over 12 startups."
+        "Evaluated 12+ startups across market size, business model, product differentiation, and financials.",
+        "Presented structured insights and investment memos to senior VCs.",
+        "Used AI tools like Perplexity, Gemini, ChatGPT for market research and due diligence."
       ],
       links: [
         {
@@ -47,11 +64,11 @@ const Experience = () => {
           imgSrc: Humind1,
           title: "Research Thesis"
         }
-        ,   {
+        , {
           url: "#",
           imgSrc: Humind2,
           title: "Research Thesis"
-        },   {
+        }, {
           url: "#",
           imgSrc: Humind3,
           title: "Research Thesis"
@@ -102,6 +119,11 @@ const Experience = () => {
             <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">
               {experience.position}
             </h1>
+            {experience.duration && (
+              <p className="text-[#836FFF] text-lg font-semibold mb-4 italic">
+                {experience.duration}
+              </p>
+            )}
             {/* Map over description array for each experience */}
             <div className="text-gray-400 mt-4 mb-4 max">
               <b>Main Tasks</b>
@@ -111,23 +133,23 @@ const Experience = () => {
             </div>
             {/* Map over links array to dynamically render multiple <a> tags */}
             {experience.links && experience.links.map((link, idx) => (
-  <section
-    key={idx}
-    className="group relative block overflow-hidden pt-5 pb-5"
-  >
-    <img
-      src={link.imgSrc}
-      alt={link.title}
-      className="w-full h-auto object-cover transition duration-500"
-      style={{ aspectRatio: "16 / 9" }} // Forces consistent aspect ratio
-    />
-    <div className="relative border border-gray-100 bg-white p-6">
-      <h3 className="mt-1.5 text-lg font-medium text-gray-900">
-        {link.title}
-      </h3>
-    </div>
-  </section>
-))}
+              <section
+                key={idx}
+                className="group relative block overflow-hidden pt-5 pb-5"
+              >
+                <img
+                  src={link.imgSrc}
+                  alt={link.title}
+                  className="w-full h-auto object-cover transition duration-500"
+                  style={{ aspectRatio: "16 / 9" }} // Forces consistent aspect ratio
+                />
+                <div className="relative border border-gray-100 bg-white p-6">
+                  <h3 className="mt-1.5 text-lg font-medium text-gray-900">
+                    {link.title}
+                  </h3>
+                </div>
+              </section>
+            ))}
 
 
           </div>
