@@ -124,33 +124,12 @@ const Experience = () => {
               </p>
             )}
             {/* Map over description array for each experience */}
-            <div className="text-gray-400 mt-4 mb-4 max">
+            <div className="text-gray-400 mt-4 mb-4 text-left">
               <b>Main Tasks</b>
               {experience.description.map((line, idx) => (
                 <p key={idx}>{line}</p>
               ))}
             </div>
-            {/* Map over links array to dynamically render multiple <a> tags */}
-            {experience.links && experience.links.map((link, idx) => (
-              <section
-                key={idx}
-                className="group relative block overflow-hidden pt-5 pb-5"
-              >
-                <img
-                  src={link.imgSrc}
-                  alt={link.title}
-                  className="w-full h-auto object-cover transition duration-500"
-                  style={{ aspectRatio: "16 / 9" }} // Forces consistent aspect ratio
-                />
-                <div className="relative border border-gray-100 bg-white p-6">
-                  <h3 className="mt-1.5 text-lg font-medium text-gray-900">
-                    {link.title}
-                  </h3>
-                </div>
-              </section>
-            ))}
-
-
           </div>
         ))}
       </div>

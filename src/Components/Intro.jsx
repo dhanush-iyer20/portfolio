@@ -27,12 +27,10 @@ const Intro = () => {
           <div className="relative flex sm:items-left items-center p-0 bg-transparent">
             <div className="p-8 pb-0 sm:p-16 lg:p-24 sm:items-left items-center">
               <h2 className="text-4xl text-white font-extrabold sm:text-6xl text-left leading-tight">
-                I build systems that <span className="text-[#836FFF]">scale.</span> �️
+                To live is to <span className="text-[#836FFF]">build.</span>
               </h2>
 
-              <p className="mt-6 text-gray-300 text-xl font-medium">
-                Full-stack dev by night, finance strategist by day.
-              </p>
+
 
               <p className="mt-4 text-gray-500 text-lg leading-relaxed">
                 Currently optimizing global insights at Citi, but my heart lies in the 0-to-1 journey.
@@ -47,12 +45,6 @@ const Intro = () => {
                 >
                   Let's Build 🚀
                 </button>
-                <a
-                  href="#projects"
-                  className="rounded-full border border-gray-700 px-8 py-4 text-white font-bold hover:bg-gray-800 transition-all"
-                >
-                  View Work
-                </a>
               </div>
             </div>
           </div>

@@ -68,18 +68,13 @@ const Ach = () => {
               🏆
             </div>
 
-            <div className="relative z-10">
+            <div className="relative z-10 text-left">
               <h3 className="text-[#836FFF] font-black text-xl mb-2 tracking-tight">
                 {achievement.title}
               </h3>
               <p className="text-white text-md font-medium leading-snug">
                 {achievement.description}
               </p>
-            </div>
-
-            <div className="mt-6 flex items-center gap-2 text-xs font-bold text-gray-500 group-hover:text-white transition-colors">
-              <span>VIEW DETAILS</span>
-              <span className="text-lg">→</span>
             </div>
           </div>
         ))}

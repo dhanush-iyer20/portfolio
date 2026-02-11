@@ -45,16 +45,6 @@ const Projects = () => {
             <p className="text-gray-400 leading-relaxed mb-6">
               {project.features}
             </p>
-            <div className="mt-auto flex items-center justify-between">
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#836FFF] font-semibold text-sm hover:underline flex items-center gap-2"
-              >
-                Explore Repo <span className="text-lg">→</span>
-              </a>
-            </div>
           </div>
         ))}
       </div>
