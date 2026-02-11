@@ -29,26 +29,40 @@ const projects = [
 
 const Projects = () => {
   return (
-    <>
-      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-[5rem]">
-        Projects
+    <section id="projects" className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-4 py-16">
+      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-12 uppercase tracking-widest">
+        Key Projects
       </h2>
-      <div id="projects" className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-[5rem] px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="group relative bg-[#111] border border-gray-800 p-8 rounded-2xl transition-all hover:border-[#836FFF] hover:shadow-[0_0_30px_-10px_rgba(131,111,255,0.3)]">
-            <div className="flex justify-between items-start mb-4">
-              <h3 className="text-2xl font-bold text-white group-hover:text-[#836FFF] transition-colors">
+          <div
+            key={index}
+            className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl shadow-xl transition-all hover:border-[#836FFF]/50 hover:shadow-[0_0_40px_-10px_rgba(131,111,255,0.15)] flex flex-col h-full"
+          >
+            <div className="flex justify-between items-start mb-6">
+              <h3 className="text-2xl font-black text-white group-hover:text-[#836FFF] transition-colors leading-tight">
                 {project.name}
               </h3>
-              <span className="text-2xl">🚀</span>
+              <div className="w-10 h-10 rounded-xl bg-[#836FFF]/10 border border-[#836FFF]/20 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all">
+                <span className="text-xl">🚀</span>
+              </div>
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-400 leading-relaxed mb-6 grow text-sm md:text-base">
               {project.features}
             </p>
+            <div className="pt-6 border-t border-gray-800/50">
+              <div className="flex flex-wrap gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                {['React', 'Node.js', 'Finance', 'Automation'].map((tag) => (
+                  <span key={tag} className="text-[10px] font-black uppercase tracking-widest text-[#836FFF] bg-[#836FFF]/5 px-2 py-0.5 rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 

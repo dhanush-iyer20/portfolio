@@ -37,26 +37,33 @@ const skills = [
 
 const Skills = () => {
   return (
-    <div className="m-8 ml-10 mr-10 mb-[6rem] max-w-[80%]">
-      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-4">
-        My Skills
+    <section className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-4 py-16">
+      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-12 uppercase tracking-widest">
+        Skills & Expertise
       </h2>
-      <div className="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
-        {skills.map((item) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skills.map((item, index) => (
           <div
-            className="flex items-start gap-4 m-6 p-6  rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_5px_rgba(255,255,255,0.4)]"
+            key={index}
+            className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl transition-all hover:border-[#836FFF]/50 hover:shadow-[0_0_40px_-10px_rgba(131,111,255,0.15)] flex flex-col items-center text-center"
           >
-            <span className="shrink-0 rounded-full bg-gray-700 p-4">
-              <img className="h-10 w-10 rounded-full" src={item.img} alt={item.name} />
-            </span>
-            <div>
-              <h2 className="text-lg font-bold text-white">{item.name}</h2>
-              <p className="mt-1 text-sm text-gray-300">{item.desc}</p>
+            <div className="w-20 h-20 mb-6 rounded-2xl bg-[#080808] border border-gray-800 flex items-center justify-center p-4 grayscale group-hover:grayscale-0 group-hover:border-[#836FFF]/30 transition-all duration-500">
+              <img className="max-h-full max-w-full object-contain" src={item.img} alt={item.name} />
             </div>
+
+            <h3 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-3">
+              {item.name.split(':')[0]}
+            </h3>
+            <h4 className="text-gray-100 font-bold text-lg mb-3 leading-tight">
+              {item.name.split(':')[1]?.trim() || item.name}
+            </h4>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

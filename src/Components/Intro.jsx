@@ -11,42 +11,42 @@ const Intro = () => {
   };
 
   return (
-    <section className="ml-5 mt-10 pt-0 max-w-[80%]">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 sm:mt-[5rem] mt-[8rem]">
-        <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2 animated fadeInUp">
-          <div className="relative z-10 lg:py-16">
-            <div className="relative h-64 sm:h-80 lg:h-full">
-              <img
-                alt="Profile"
-                src={mainimg}
-                className="absolute image-intro inset-0 h-full w-full object-contain mb-5"
-              />
-            </div>
+    <section className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-6 py-16 sm:py-24 lg:py-32">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="relative order-2 lg:order-1">
+          <div className="inline-flex items-center gap-2 bg-[#836FFF]/10 text-[#836FFF] text-[10px] font-black px-3 py-1 rounded-full border border-[#836FFF]/20 mb-6 tracking-widest uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#836FFF] animate-pulse"></span>
+            Front-End × Finance × Automation
           </div>
 
-          <div className="relative flex sm:items-left items-center p-0 bg-transparent">
-            <div className="p-8 pb-0 sm:p-16 lg:p-24 sm:items-left items-center">
-              <h2 className="text-4xl text-white font-extrabold sm:text-6xl text-left leading-tight">
-                To live is to <span className="text-[#836FFF]">build.</span>
-              </h2>
+          <h1 className="text-5xl sm:text-7xl font-black text-white leading-[1.1] mb-8 tracking-tighter">
+            To live is to <br />
+            <span className="text-[#836FFF]">build.</span>
+          </h1>
 
+          <p className="text-gray-400 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl">
+            Currently optimizing global insights at Citi, but my heart lies in the 0-to-1 journey.
+            I build systems that bridge complex finance with clean code.
+          </p>
 
+          <div className="flex flex-wrap gap-6 items-center">
+            <button
+              onClick={scrollToContact}
+              className="group relative inline-flex items-center gap-3 bg-[#836FFF] hover:bg-[#6c5ce7] text-white font-black text-xs uppercase tracking-[0.2em] px-10 py-5 rounded-full shadow-[0_0_30px_-5px_rgba(131,111,255,0.4)] transition-all transform hover:scale-105"
+            >
+              Start Building 🚀
+            </button>
+          </div>
+        </div>
 
-              <p className="mt-4 text-gray-500 text-lg leading-relaxed">
-                Currently optimizing global insights at Citi, but my heart lies in the 0-to-1 journey.
-                I've shipped 3+ full-stack apps, automated workflows for shipping giants, and
-                converted trash hardware into personal cloud infrastructure.
-              </p>
-
-              <div className="flex gap-4 mt-8">
-                <button
-                  onClick={scrollToContact}
-                  className="rounded-full bg-[#836FFF] px-8 py-4 text-white font-bold hover:bg-[#6c5ce7] transition-all transform hover:scale-105"
-                >
-                  Let's Build 🚀
-                </button>
-              </div>
-            </div>
+        <div className="relative order-1 lg:order-2">
+          <div className="relative aspect-square max-w-[500px] mx-auto">
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#836FFF]/20 to-transparent rounded-3xl rotate-6 -z-10 blur-2xl"></div>
+            <img
+              alt="Profile"
+              src={mainimg}
+              className="w-full h-full object-contain filter drop-shadow-[0_0_30px_rgba(131,111,255,0.2)] transition-transform duration-700 hover:scale-105"
+            />
           </div>
         </div>
       </div>

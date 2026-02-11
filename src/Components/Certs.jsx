@@ -39,50 +39,54 @@ const certs = [
 ];
 const Certs = () => {
   return (
-    <div>
-      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-4">
+    <section className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-4 py-16">
+      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-12 uppercase tracking-widest">
         Certifications
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-screen-xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* NISM */}
-        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
-          <div className="flex items-center gap-4 mb-4">
-            <span className="bg-[#836FFF]/10 text-[#836FFF] p-2 rounded-lg font-bold text-xs">NISM</span>
-            <h3 className="text-white font-bold">Research Analyst</h3>
+        <div className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl transition-all hover:border-[#836FFF]/50 hover:shadow-[0_0_40px_-10px_rgba(131,111,255,0.15)] flex flex-col items-start">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#836FFF] animate-pulse"></div>
+            <span className="bg-[#836FFF]/10 text-[#836FFF] px-3 py-1 rounded-full font-black text-[10px] border border-[#836FFF]/20 tracking-widest uppercase">NISM</span>
           </div>
-          <p className="text-gray-400 text-sm">Equity market research, financial modelling, and valuation analysis.</p>
+          <h3 className="text-white font-black text-xl mb-3 leading-tight group-hover:text-[#836FFF] transition-colors">Research Analyst</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">Equity market research, financial modelling, and valuation analysis.</p>
         </div>
 
         {/* Google */}
-        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
-          <div className="flex items-center gap-4 mb-4">
-            <span className="bg-blue-500/10 text-blue-500 p-2 rounded-lg font-bold text-xs">GOOGLE</span>
-            <h3 className="text-white font-bold">Data Analytics</h3>
+        <div className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl transition-all hover:border-blue-500/50 hover:shadow-[0_0_40px_-10px_rgba(59,130,246,0.15)] flex flex-col items-start">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></div>
+            <span className="bg-blue-500/10 text-blue-500 px-3 py-1 rounded-full font-black text-[10px] border border-blue-500/20 tracking-widest uppercase">GOOGLE</span>
           </div>
-          <p className="text-gray-400 text-sm">Advanced Excel, SQL, Tableau, R, and data-driven decision making.</p>
+          <h3 className="text-white font-black text-xl mb-3 leading-tight group-hover:text-blue-500 transition-colors">Data Analytics</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">Advanced Excel, SQL, Tableau, R, and data-driven decision making.</p>
         </div>
 
         {/* CFI */}
-        <div className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
-          <div className="flex items-center gap-4 mb-4">
-            <span className="bg-yellow-500/10 text-yellow-500 p-2 rounded-lg font-bold text-xs">CFI</span>
-            <h3 className="text-white font-bold">Business Analytics</h3>
+        <div className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl transition-all hover:border-yellow-500/50 hover:shadow-[0_0_40px_-10px_rgba(234,179,8,0.15)] flex flex-col items-start">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse"></div>
+            <span className="bg-yellow-500/10 text-yellow-500 px-3 py-1 rounded-full font-black text-[10px] border border-yellow-500/20 tracking-widest uppercase">CFI</span>
           </div>
-          <p className="text-gray-400 text-sm">Mastering business intelligence tools and predictive modelling.</p>
+          <h3 className="text-white font-black text-xl mb-3 leading-tight group-hover:text-yellow-500 transition-colors">Business Analytics</h3>
+          <p className="text-gray-400 text-sm leading-relaxed">Mastering business intelligence tools and predictive modelling.</p>
         </div>
 
         {/* Map through the rest of the certs array */}
         {certs.map((item, index) => (
-          <div key={index} className="bg-[#1a1a1a] border border-gray-800 p-6 rounded-xl hover:border-[#836FFF] transition-colors">
-            <div className="flex items-center gap-4 mb-4">
-              <span className="bg-gray-700/50 text-gray-300 p-2 rounded-lg font-bold text-xs uppercase">{item.by}</span>
-              <h3 className="text-white font-bold">{item.name.split(' - ')[1] || item.name}</h3>
+          <div key={index} className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl transition-all hover:border-[#836FFF]/50 hover:shadow-[0_0_40px_-10px_rgba(131,111,255,0.15)] flex flex-col items-start">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-1.5 h-1.5 rounded-full bg-gray-600 animate-pulse"></div>
+              <span className="bg-gray-700/10 text-gray-500 px-3 py-1 rounded-full font-black text-[10px] border border-gray-700/20 tracking-widest uppercase">{item.by}</span>
             </div>
-            <p className="text-gray-400 text-sm">{item.desc}</p>
+            <h3 className="text-white font-black text-xl mb-3 leading-tight group-hover:text-[#836FFF] transition-colors">{item.name.split(' - ')[1] || item.name}</h3>
+            <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

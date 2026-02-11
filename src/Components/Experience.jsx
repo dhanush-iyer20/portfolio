@@ -98,51 +98,54 @@ const Experience = () => {
   ];
 
   return (
-    <section className="bg-transparent dark:bg-transparent animated fadeInUp max-w-[80%] items-center justify center">
-      <h2 className="title mt-[2rem] sm:mt-[1rem] mb-[2rem] sm:mb-[4rem] text-3xl font-bold sm:text-4xl text-white text-center">
+    <section className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-4 py-16">
+      <h2 className="title text-3xl font-bold sm:text-4xl text-center text-white mb-12 uppercase tracking-widest">
         Experience
       </h2>
-      <div className="py-0 px-4 mx-auto max-w-screen-xl lg:py-0">
-        {/* Map over experiences array to render each card */}
+      <div className="space-y-8">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className="bg-transparent rounded-lg dark:bg-transparent border border-gray-200 dark:border-gray-700 p-8 md:p-12 mb-8"
+            className="group relative bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 rounded-2xl shadow-xl transition-all hover:border-[#836FFF]/50 hover:shadow-[0_0_40px_-10px_rgba(131,111,255,0.15)]"
           >
-            <a
-              href=""
-              className="bg-[#836FFF] cursor-pointer text-[#836FFF] text-xl font-medium inline-flex items-center px-2.5 py-0.5 rounded-md dark:bg-gray-700 dark:text-[#836FFF] mb-2"
-            >
-              {experience.company}
-            </a>
-            <h1 className="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">
-              {experience.position}
-            </h1>
-            {experience.duration && (
-              <p className="text-[#836FFF] text-lg font-semibold mb-4 italic">
-                {experience.duration}
-              </p>
-            )}
-            {/* Map over description array for each experience */}
-            <div className="text-gray-400 mt-4 mb-4 text-left">
-              <b>Main Tasks</b>
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+              <div>
+                <div className="inline-flex items-center gap-2 bg-[#836FFF]/10 text-[#836FFF] text-[10px] font-black px-3 py-1 rounded-full border border-[#836FFF]/20 mb-3 tracking-widest uppercase">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#836FFF] animate-pulse"></span>
+                  {experience.company}
+                </div>
+                <h3 className="text-2xl md:text-4xl font-black text-white leading-tight">
+                  {experience.position}
+                </h3>
+              </div>
+              {experience.duration && (
+                <div className="text-gray-500 font-bold text-xs md:text-sm border-l-2 border-gray-800 pl-4 uppercase tracking-wider">
+                  {experience.duration}
+                </div>
+              )}
+            </div>
+
+            <div className="text-gray-400 space-y-4 max-w-4xl">
               {experience.description.map((line, idx) => (
-                <p key={idx}>{line}</p>
+                <div key={idx} className="flex gap-4">
+                  <span className="text-[#836FFF] font-black mt-1 text-lg">›</span>
+                  <p className="leading-relaxed text-sm md:text-base">{line}</p>
+                </div>
               ))}
             </div>
 
-            {/* Restored Images Grid */}
             {experience.links && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 pt-8 border-t border-gray-800/50">
                 {experience.links.map((link, idx) => (
-                  <div key={idx} className="group relative overflow-hidden rounded-xl border border-gray-800 bg-[#111]">
+                  <div key={idx} className="group/img relative overflow-hidden rounded-xl bg-[#080808] border border-gray-800 transition-all hover:border-[#836FFF]/30">
                     <img
                       src={link.imgSrc}
                       alt={link.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-44 object-cover opacity-50 transition-all duration-700 group-hover/img:opacity-100 group-hover/img:scale-110"
                     />
-                    <div className="p-4">
-                      <h4 className="text-white font-bold text-sm uppercase tracking-wider">{link.title}</h4>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                    <div className="absolute bottom-4 left-4">
+                      <h4 className="text-white font-black text-[10px] uppercase tracking-[0.2em]">{link.title}</h4>
                     </div>
                   </div>
                 ))}

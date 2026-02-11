@@ -18,59 +18,67 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact-section" className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-lg">
-        <h1 className="text-center text-2xl font-bold text-white sm:text-3xl">
-          REACH OUT!
-        </h1>
+    <section id="contact-section" className="bg-transparent animated fadeInUp max-w-screen-xl mx-auto px-4 py-16">
+      <div className="mx-auto max-w-2xl bg-[#111]/50 backdrop-blur-md border border-gray-800 p-8 sm:p-12 rounded-3xl shadow-2xl transition-all hover:border-[#836FFF]/30">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-black text-white sm:text-4xl mb-4 tracking-tighter uppercase">
+            Let's <span className="text-[#836FFF]">Build</span> Together
+          </h2>
+          <p className="max-w-md mx-auto text-gray-400 font-medium">
+            Have a project in mind or just want to chat about the intersection of finance and tech? Drop me a line!
+          </p>
+        </div>
 
-        <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
-          Feel free to leave a message. I'll get back to you as soon as possible!
-        </p>
-
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8 bg-white">
-          <div>
-            <input
-              type="text"
-              name="name"
-              className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 ml-1">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                className="w-full bg-[#080808] border border-gray-800 rounded-xl p-4 text-white text-sm focus:border-[#836FFF] focus:ring-1 focus:ring-[#836FFF] outline-none transition-all"
+                placeholder="Dhanush Iyer"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div>
+              <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 ml-1">Email Address</label>
+              <input
+                type="email"
+                name="email"
+                className="w-full bg-[#080808] border border-gray-800 rounded-xl p-4 text-white text-sm focus:border-[#836FFF] focus:ring-1 focus:ring-[#836FFF] outline-none transition-all"
+                placeholder="iyerdhanush4@gmail.com"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
 
           <div>
-            <input
-              type="email"
-              name="email"
-              className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-
-          <div>
+            <label className="block text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2 ml-1">Your Message</label>
             <textarea
               name="message"
-              className="w-full rounded-lg border-gray-200 p-4 text-sm shadow-sm"
-              placeholder="Your Message"
-              rows="4"
+              className="w-full bg-[#080808] border border-gray-800 rounded-xl p-4 text-white text-sm focus:border-[#836FFF] focus:ring-1 focus:ring-[#836FFF] outline-none transition-all"
+              placeholder="Tell me about your vision..."
+              rows="5"
               value={formData.message}
               onChange={handleChange}
               required
             ></textarea>
           </div>
 
-          <button type="submit" className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white">
-            Send Message
+          <button
+            type="submit"
+            className="w-full bg-[#836FFF] hover:bg-[#6c5ce7] text-white font-black text-xs uppercase tracking-[0.2em] py-5 rounded-xl shadow-[0_0_20px_-5px_rgba(131,111,255,0.4)] transition-all transform hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Send Transmission 🚀
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 
